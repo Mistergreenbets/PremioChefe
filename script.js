@@ -8,11 +8,16 @@ db.ref("rifa").on("value",(snapshot)=>{
 
 grid.innerHTML=""
 
+let vendidos = 0
+let total = 200
+
+let dadosBanco = snapshot.val() || {}
+
 for(let i=1;i<=200;i++){
 
 let numero = i.toString().padStart(3,"0")
 
-let dados = snapshot.val()?.[numero]
+let dados = dadosBanco[numero]
 
 let div = document.createElement("div")
 
@@ -26,6 +31,11 @@ div.classList.add("disponivel")
 
 div.classList.add(dados.status)
 
+/* CONTAGEM */
+if(dados.status === "reservado" || dados.status === "pago"){
+    vendidos++
+}
+
 }
 
 div.innerText = numero
@@ -35,6 +45,9 @@ div.onclick = ()=>abrir(numero,dados)
 grid.appendChild(div)
 
 }
+
+/* ATUALIZA PROGRESSO */
+atualizarProgresso(total, vendidos)
 
 })
 
@@ -48,7 +61,7 @@ numeroAtual = numero
 
 document.getElementById("numero").innerText="Número "+numero
 
-// LIMPAR CAMPOS AO ABRIR TAMBÉM
+/* LIMPAR CAMPOS */
 document.getElementById("nome").value = ""
 document.getElementById("telefone").value = ""
 
@@ -60,7 +73,6 @@ function fechar(){
 
 document.getElementById("modal").style.display="none"
 
-// LIMPAR CAMPOS
 document.getElementById("nome").value = ""
 document.getElementById("telefone").value = ""
 
@@ -86,4 +98,29 @@ fechar()
 
 }
 
+/* FUNÇÃO DA BARRA (PROTEGIDA) */
+function atualizarProgresso(total, vendidos){
+
+let barra = document.getElementById("barra")
+let contador = document.getElementById("contador")
+
+if(!barra || !contador) return // evita quebrar o site
+
+let porcentagem = (vendidos / total) * 100
+
+barra.style.width = porcentagem + "%"
+contador.innerText = vendidos + " de " + total + " números vendidos"
+
+}
+
 carregarMapa()
+
+window.addEventListener("scroll", function () {
+    let header = document.getElementById("header");
+
+    if (window.scrollY > 50) {
+        header.classList.add("ativo");
+    } else {
+        header.classList.remove("ativo");
+    }
+});
