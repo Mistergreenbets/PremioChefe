@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rifa Online</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+</head>
+
+<body>
+
+<h1>🎟 Escolha seu número</h1>
+
+<div id="grid" class="grid"></div>
+
+<div id="modal" class="modal">
+
+<div class="box">
+
+<h3 id="numero"></h3>
+
+<input id="nome" placeholder="Seu nome">
+
+<input id="telefone" placeholder="Telefone">
+
+<button onclick="reservar()">Reservar</button>
+
+<button onclick="fechar()">Cancelar</button>
+
+</div>
+
+</div>
+
+<script src="firebase.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
