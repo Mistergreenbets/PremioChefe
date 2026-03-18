@@ -48,6 +48,10 @@ numeroAtual = numero
 
 document.getElementById("numero").innerText="Número "+numero
 
+// LIMPAR CAMPOS AO ABRIR TAMBÉM
+document.getElementById("nome").value = ""
+document.getElementById("telefone").value = ""
+
 document.getElementById("modal").style.display="flex"
 
 }
@@ -55,6 +59,10 @@ document.getElementById("modal").style.display="flex"
 function fechar(){
 
 document.getElementById("modal").style.display="none"
+
+// LIMPAR CAMPOS
+document.getElementById("nome").value = ""
+document.getElementById("telefone").value = ""
 
 }
 
