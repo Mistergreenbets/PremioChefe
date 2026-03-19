@@ -212,20 +212,20 @@ margin-bottom:15px;
 /* LOGO BASE */
 .logo{
     width: auto;          /* 🔥 remove esticamento */
-    height: 90px;         /* controla pelo tamanho fixo */
+    height: 110px;         /* controla pelo tamanho fixo */
     max-width: 100%;
 }
 
 /* ADMIN - PADRÃO */
 .admin-page .logo{
-    height: 90px; /* menor e mais elegante */
+    height: 110px; /* menor e mais elegante */
 }
 
 /* TELAS GRANDES (PC) */
 @media(max-width:500px){
 
 .admin-page .logo{
-    height: 90px; /* um pouco maior no celular */
+    height: 110px; /* um pouco maior no celular */
 }
 
 }
