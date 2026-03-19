@@ -209,15 +209,6 @@ margin-bottom:15px;
     padding-top: 10px !important;
 }
 
-/* LOGO PADRÃO (caso não tenha) */
-.logo.in{
-    max-width:180px;
-}
-
-/* AJUSTE ESPECÍFICO DO ADMIN */
-.admin-page .logo.in{
-    max-width:120px; /* diminui só no admin */
-}
 /* RESPONSIVO */
 
 @media(max-width:500px){
