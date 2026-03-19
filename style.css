@@ -203,11 +203,6 @@ margin-top:0;      /* remove espaço acima */
 margin-bottom:15px;
 }
 
-.logo{
-max-width:160px;
-margin:0;          /* remove espaçamento extra */
-}
-
 /* RESPONSIVO */
 
 @media(max-width:500px){
