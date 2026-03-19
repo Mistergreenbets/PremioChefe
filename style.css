@@ -199,12 +199,13 @@ td,th{
 display:flex;
 flex-direction:column;
 align-items:center;
-margin-bottom:20px;
+margin-top:0;      /* remove espaço acima */
+margin-bottom:15px;
 }
 
 .logo{
-max-width:180px;
-margin-bottom:10px;
+max-width:160px;
+margin:0;          /* remove espaçamento extra */
 }
 
 /* RESPONSIVO */
