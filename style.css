@@ -203,6 +203,12 @@ margin-top:0;      /* remove espaço acima */
 margin-bottom:15px;
 }
 
+/* REMOVE ESPAÇO DO HEADER APENAS NO ADMIN */
+
+.admin-page{
+    padding-top: 10px !important;
+}
+
 /* RESPONSIVO */
 
 @media(max-width:500px){
