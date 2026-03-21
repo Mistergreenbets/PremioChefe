@@ -1,3 +1,12 @@
+const senhaAdmin = "chefe3060"; // troque por uma senha forte
+
+let senha = prompt("Digite a senha de administrador:");
+
+if(senha !== senhaAdmin){
+  alert("Acesso negado!");
+  window.location.href = "index.html";
+}
+
 const tabela = document.getElementById("tabela")
 
 db.ref("rifa").on("value",(snapshot)=>{
